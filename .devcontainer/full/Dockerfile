@@ -32,6 +32,9 @@ EXPOSE 8081
 CMD ["/bin/bash"]
 # Add the following to the existing Dockerfile to install PowerShell
 
+# Switch to root user to install packages
+USER root
+
 # Install prerequisites
 RUN apt-get update && apt-get install -y \
     wget \
