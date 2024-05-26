@@ -28,8 +28,6 @@ RUN pip install numpy pandas matplotlib seaborn scikit-learn requests urllib3 nl
 # Expose port
 EXPOSE 8081
 
-# Start Command
-CMD ["/bin/bash"]
 # Add the following to the existing Dockerfile to install PowerShell
 
 # Switch to root user to install packages
@@ -46,3 +44,7 @@ RUN wget -q "https://packages.microsoft.com/config/debian/10/packages-microsoft-
     && dpkg -i packages-microsoft-prod.deb \
     && apt-get update \
     && apt-get install -y powershell
+
+
+# Start Command
+CMD ["/bin/bash"]
